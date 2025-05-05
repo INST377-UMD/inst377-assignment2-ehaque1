@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Market - INST377</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <h1>INST377 - Stock Market</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="stocks.html">Stocks</a>
+            <a href="dogs.html">Dogs</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="stock-controls">
+            <h2>Stock Lookup</h2>
+            <div class="input-group">
+                <input type="text" id="stockTicker" placeholder="Enter ticker (e.g. AAPL)" maxlength="5">
+                <select id="daysRange">
+                    <option value="30">30 Days</option>
+                    <option value="60">60 Days</option>
+                    <option value="90">90 Days</option>
+                </select>
+                <button id="fetchStock" class="lookup-btn">Lookup</button>
+            </div>
+            <p id="errorMessage" class="error-message"></p>
+        </section>
+
+        <section class="chart-container">
+            <canvas id="stockChart"></canvas>
+        </section>
+
+        <section class="sentiment-table">
+            <h2>Market Sentiment</h2>
+            <table id="redditStocksTable">
+                <thead>
+                    <tr>
+                        <th>Ticker</th>
+                        <th>Comments</th>
+                        <th>Sentiment</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Populated by JavaScript -->
+                </tbody>
+            </table>
+        </section>
+
+        <div class="audio-panel">
+          <h3>In this web page there are options to Navigate using Audio!</h3>
+          <p>Ensure your Mic is enabled to be able to use this feature</p>
+          
+          <ul class="commands">
+              <li>Navigate to a Different Page
+                  <ul>
+                      <li>Say: Navigate to &lt;page&gt;</li>
+                  </ul>
+              </li>
+              <li>Change the Page Color
+                  <ul>
+                      <li>Say: Change the color to &lt;color&gt;</li>
+                  </ul>
+              </li>
+              <li>Say Hello Back to you!
+                  <ul>
+                      <li>Say: Hello</li>
+                  </ul>
+              </li>
+          </ul>
+          
+          <div class="audio-controls">
+              <button id="startListening">Turn On Listening</button>
+              <button id="stopListening">Turn Off Listening</button>
+          </div>
+      </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
+  <script src="script.js"></script>
+
+
+    <script src="stocks.js"></script>
+</body>
+</html>
