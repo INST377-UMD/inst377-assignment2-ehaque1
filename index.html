@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INST377 - Activities</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>INST377 - Activities</h1>
+        
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="stocks.html">Stocks</a></li>
+                <li><a href="dogs.html">Dogs</a></li>
+            </ul>
+        </nav>
+        
+        <p class="intro">These are some different activities we can try!</p>
+        
+        <div class="buttons-container">
+            <button class="button-49" role="button" onclick="window.location.href='stocks.html'">Stocks</button>
+            <button class="button-49" role="button" onclick="window.location.href='dogs.html'">Dogs</button>
+        </div>
+        
+        <div class="quote-box">
+            <h2>Quote of the Page Load</h2>
+            <p id="quote">Loading quote...</p>
+            <p id="author"></p>
+        </div>
+        
+        <div class="audio-panel">
+            <h3>In this web page there are options to Navigate using Audio!</h3>
+            <p>Ensure your Mic is enabled to be able to use this feature</p>
+            
+            <ul class="commands">
+                <li>Navigate to a Different Page
+                    <ul>
+                        <li>Say: Navigate to &lt;page&gt;</li>
+                    </ul>
+                </li>
+                <li>Change the Page Color
+                    <ul>
+                        <li>Say: Change the color to &lt;color&gt;</li>
+                    </ul>
+                </li>
+                <li>Say Hello Back to you!
+                    <ul>
+                        <li>Say: Hello</li>
+                    </ul>
+                </li>
+            </ul>
+            
+            <div class="audio-controls">
+                <button id="startListening">Turn On Listening</button>
+                <button id="stopListening">Turn Off Listening</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
+    <script src="home.js"></script>
+</body>
+</html>
